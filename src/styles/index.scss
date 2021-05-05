@@ -1,0 +1,26 @@
+@import "normalize.css";
+@import "globals.scss";
+@import "./components/Navbar/index.scss";
+
+body {
+	background-color: bisque;
+	font-family: 'Roboto', sans-serif;
+}
+#root {
+	width: 100%;
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header {
+	width: 100%;
+	background-color: #EEEFF1;
+}
+
+ul {
+	padding-inline-start: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}

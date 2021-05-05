@@ -1,23 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Logo } from './components/Navbar/Logo';
+import logotype from './components/Navbar/cdwd-logo.png';
+import { Navbar } from './components/Navbar/Navbar';
+import './styles/index.scss';
+import { NavList } from './components/Navbar/NavList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="header">
+        <Navbar>
+          <Logo image={logotype} alt="logotype"/>
+          <NavList 
+            list={[
+                {name: "Главная", href: "/"},
+                {name: "Обо мне", href: "/about"},
+                {name: "Работы", href: "/works"},
+                {name: "Контакты", href: "/contacts"},
+              ]}
+          />
+        </Navbar>
+        
       </header>
     </div>
   );
